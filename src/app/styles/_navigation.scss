@@ -1,0 +1,128 @@
+#main-nav-toggle {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    border-radius: 50%;
+    min-width: 56px;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transition-all;
+    z-index: 10;
+
+    @media screen and (min-width: $mobile-nav-min) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: $mobile-nav-max) {
+    .main-nav-open {
+        // Body style 
+        position: relative;
+        left: $main-nav-width-mobile;
+        overflow: hidden;
+
+        // Black shade
+        &::after {
+            content: '';
+            width: 100px;
+            height: 100px;
+            background-color: rgba($black, .6);
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        // navigation
+        nav#main-nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: $main-nav-width-mobile;
+            height: 100vh;
+            z-index: 10;
+        }
+
+        // navigation toggle 
+        #main-nav-toggle {
+            color: $white;
+            background-color: $primary-color;
+            transform: rotate(360deg);
+        }
+    }
+}
+
+#main-nav {
+    background-color: $primary-color;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+
+    transition: $transition-all;
+
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: $main-nav-width-mobile;
+    height: 100vh;
+
+    a {
+        color: $white;
+        display: block;
+        padding: 8px;
+        margin-bottom: 16px;
+        text-decoration: none;
+        position: relative;
+        transition: $transition-all;
+
+        &.active::after {
+            content: '';
+            border-bottom: 3px solid $secondary-color;
+            border-radius: 16px;
+            width: 100%;
+            position: absolute;
+            bottom: -8px;
+            left: 0px;
+            transition: $transition-all;
+        }
+
+        &:hover::after {
+            content: '';
+            background-color: $secondary-color;
+            border-radius: 50%;
+            border-bottom: none;
+            height: 8px;
+            width: 8px;
+            position: absolute;
+            bottom: 12px;
+            left: -8px;
+            transition: $transition-all;
+        }
+    }
+
+    @media screen and (min-width: $mobile-nav-min) {
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row;
+        height: 56px;
+        width: 100%;
+        padding: 0px 16px;
+        position: relative;
+        left: 0;
+
+        a {
+            padding: 0px 16px;
+            margin-bottom: 0px;
+
+            &:hover::after {
+                content: '';
+                bottom: -8px;
+                left: 50%;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@import 'src/app/styles/variables';
+
+#header-logo-cta {
+    text-align: center;
+
+    #header-logo {
+        max-height: $header-height;
+        max-width: 100%;
+    }
+
+    #header-cta {}
+
+    @media screen and (min-width: 441px) {
+        display: flex;
+
+        #header-cta {
+            flex: auto;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}

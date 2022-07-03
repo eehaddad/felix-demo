@@ -1,0 +1,22 @@
+// icon pack: https://ionic.io/ionicons
+
+/* colors */
+$primary-color: #182557;
+$secondary-color: #ab8211;
+$black: #0a0a0a;
+$white: #fff;
+
+/* animations */
+$transition-all: all 0.25s ease;
+
+/* sizes */ 
+$header-height: 75px;
+$main-nav-width-mobile: 280px; 
+
+/* borders */
+$border-radius: 8px; 
+
+
+/* breakpoints */
+$mobile-nav-max: 545px;
+$mobile-nav-min: $mobile-nav-max - 1;
