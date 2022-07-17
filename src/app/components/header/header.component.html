@@ -1,18 +1,23 @@
-<header>
+<header id="main-header">
     <div id="header-logo-cta">
         <button type="button" id="main-nav-toggle" (click)="toggleMenu()">
-            <ion-icon *ngIf="mobileNavClosed" name="menu-outline"></ion-icon>
-            <ion-icon *ngIf="!mobileNavClosed" name="close-outline"></ion-icon>
+            <span class="material-symbols-outlined">{{mobileNavClosed ? 'menu' : 'close'}}</span>
         </button>
-    <img id="header-logo" src="assets/images/logo.jpg">
-    <p id="header-cta">
-        Available now!
-        (800) 555-5555
-    </p>
-</div>
-<nav id="main-nav" role="main">
-    <a routerLink="/home" routerLinkActive="active"> Home</a>
-    <a routerLink="/about" routerLinkActive="active"> Who We Are</a>
-    <a routerLink="/contact" routerLinkActive="active"> Contact Us</a>
-</nav>
+        <a routerLink="." (click)="scrollToTop()">
+            <img id="header-logo" src="assets/images/logo.png">
+        </a>
+        <p id="header-cta">
+            Available now!
+            (800) 555-5555
+        </p>
+    </div>
+    <nav id="main-nav" role="main">
+        <!-- <a routerLink="." fragment="main" [class.active]="activeFragment('main') || activeHomepage()"> Home</a> -->
+        <a routerLink="." fragment="about" [class.active]="activeFragment('about')"> Who We Are </a>
+        <a routerLink="." fragment="services" [class.active]="activeFragment('services')"> Services </a>
+        <a routerLink="." fragment="faq" [class.active]="activeFragment('faq')"> Common Questions </a>
+        <a routerLink="." fragment="contact" [class.active]="activeFragment('contact')"> Contact Us </a>
+    </nav>
 </header>
+
+<!-- update navigation to be side nave with menu button ? -->

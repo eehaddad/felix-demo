@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "felix-app": {
+    "wsn-psychological-group": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -12,12 +12,12 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "wsn",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/felix-app",
+            "outputPath": "dist/wsn-psychological-group",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -25,17 +25,7 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              {
-                "glob": "**/*",
-                "input": "node_modules/ionicons/dist/ionicons",
-                "output": "./ionicons"
-              },
-              {
-                "glob": "**/*.js",
-                "input": "node_modules/ionicons/dist/",
-                "output": "./"
-              }
+              "src/assets"
             ],
             "styles": [
               "src/styles.scss"
@@ -79,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "felix-app:build:production"
+              "browserTarget": "wsn-psychological-group:build:production"
             },
             "development": {
-              "browserTarget": "felix-app:build:development"
+              "browserTarget": "wsn-psychological-group:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -90,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "felix-app:build"
+            "browserTarget": "wsn-psychological-group:build"
           }
         },
         "test": {
@@ -103,17 +93,7 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              {
-                "glob": "**/*",
-                "input": "node_modules/ionicons/dist/ionicons",
-                "output": "./ionicons"
-              },
-              {
-                "glob": "**/*.js",
-                "input": "node_modules/ionicons/dist/",
-                "output": "./"
-              }
+              "src/assets"
             ],
             "styles": [
               "src/styles.scss"

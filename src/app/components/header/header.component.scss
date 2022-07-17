@@ -1,7 +1,16 @@
 @import 'src/app/styles/variables';
 
+header#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
 #header-logo-cta {
     text-align: center;
+    background-color: $white;
 
     #header-logo {
         max-height: $header-height;
@@ -10,7 +19,7 @@
 
     #header-cta {}
 
-    @media screen and (min-width: 441px) {
+    @media screen and (min-width: $sm-width-min) {
         display: flex;
 
         #header-cta {

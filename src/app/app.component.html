@@ -1,6 +1,35 @@
-<app-header></app-header>
-<main>
-  this is a test home 
+<wsn-header [activeScrollId]="currentSection"></wsn-header>
+<main sectionScroll (sectionChange)="onSectionChange($event)">
   <router-outlet></router-outlet>
+  <section id="main" style="margin-top:175px">
+    <wsn-highlight
+    highlightId="hero-highlight"
+    text="Providing psychological services with competence, compassion, and integrity."
+    bgColor="blue"
+    textColor="blue">
+    </wsn-highlight>
+    
+    <!-- <img class="hero-image" src="assets/images/psychological-services-group.png">
+     -->
+  </section>
+  <section id="about" class="content-container">
+    <wsn-about></wsn-about>
+  </section>
+  <wsn-highlight
+  highlightId="services-highlight"
+  text="Recognizing the need for mental health services across various settings, our founders came together and
+  decided to heed the call and use our training and experience to be of service to our community."
+  bgColor="blue"
+  textColor="blue">
+  </wsn-highlight>
+  <section id="services" class="content-container">
+    <wsn-services></wsn-services>
+  </section>
+  <section id="faq" class="content-container">
+    <wsn-faq></wsn-faq>
+  </section>
+  <section id="contact" class="content-container">
+    <wsn-contact></wsn-contact>
+  </section>
 </main>
-<app-footer></app-footer>
+<wsn-footer></wsn-footer>

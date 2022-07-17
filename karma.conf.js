@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/felix-app'),
+      dir: require('path').join(__dirname, './coverage/wsn-psychological-group'),
       subdir: '.',
       reporters: [
         { type: 'html' },

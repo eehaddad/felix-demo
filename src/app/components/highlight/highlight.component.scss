@@ -1,0 +1,37 @@
+@import 'src/app/styles/variables';
+
+.highlight-container {
+    display: flex;
+    opacity: 0;
+    left: 80vw;
+    transition: $transition-all;
+
+    &.highlight-animate {
+        transition: $transition-all;
+        opacity: 1;
+        position: relative;
+        left: 0px;
+    }
+
+    .highlight-text {
+    font-size: 1rem;
+    font-family: $serif-font;
+    font-style: italic;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    padding: 16px 5%;
+    margin-left: 10%;
+    @media screen and (min-width: $md-width-min) {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+    @media screen and (min-width: $lg-width-min) {
+        font-size: 3rem;
+        line-height: 5rem;
+    }
+}
+
+.highlight-color-block {
+    min-width: 15%;
+}
+}

@@ -1,8 +1,15 @@
-// icon pack: https://ionic.io/ionicons
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&family=Montserrat:wght@400;600&family=Playfair+Display:ital@0;1&display=swap');
+
+$san-serif-font: 'Montserrat', 'Gill Sans', Calibri, sans-serif;
+$serif-font: 'Playfair Display', Georgia, Times, serif;
+$icon-font: 'Material Symbols Outlined';
+$font-size-base: 16px;
+$icon-size-base: 24px;
 
 /* colors */
-$primary-color: #182557;
-$secondary-color: #ab8211;
+$primary-color: #005978;
+$secondary-color: #fed13f;
 $black: #0a0a0a;
 $white: #fff;
 
@@ -10,13 +17,29 @@ $white: #fff;
 $transition-all: all 0.25s ease;
 
 /* sizes */ 
-$header-height: 75px;
+$header-height: 115px;
 $main-nav-width-mobile: 280px; 
+$content-max-width: 1360px;
 
 /* borders */
 $border-radius: 8px; 
 
-
 /* breakpoints */
-$mobile-nav-max: 545px;
-$mobile-nav-min: $mobile-nav-max - 1;
+$breakpoints: (
+    xs: 0,
+    sm: 440px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1240px
+);
+
+$sm-width-min: map-get($breakpoints, sm);
+$sm-width-max: $sm-width-min -1;
+$md-width-min: map-get($breakpoints, md);
+$md-width-max: $md-width-min -1; 
+$lg-width-min: map-get($breakpoints, lg);
+$lg-width-max: $lg-width-min -1; 
+$xl-width-min: map-get($breakpoints, xl);
+$xl-width-max: $xl-width-min -1; 
+
+

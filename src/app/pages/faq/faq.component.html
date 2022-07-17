@@ -1,0 +1,11 @@
+<h2>Common questions</h2>
+<article class="margin-x--16">
+    <ng-container *ngFor="let item of commonQuestions">
+        <p class="font-color--primary font-weight--600 font-size--18 margin-bottom--8">
+            {{item.question}}
+        </p>
+        <p class="margin-bottom--24">
+            {{item.answer}}
+        </p>
+    </ng-container>
+</article>

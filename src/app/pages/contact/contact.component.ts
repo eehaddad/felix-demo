@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
-  selector: 'app-contact',
+  selector: 'wsn-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-
-  constructor() { }
+  @Input() public currentSectionId!: string | null;
 
   ngOnInit(): void {
   }

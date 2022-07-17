@@ -6,8 +6,113 @@ body,
 html {
     height: 100%;
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 16px;
+    font-family: $san-serif-font;
+    font-size: $font-size-base;
     margin: 0px;
     scroll-behavior: smooth;
+}
+
+h2 {
+    color: $primary-color;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0px 16px 24px;
+
+    @media screen and (min-width: $sm-width-min) {
+        font-size: 32px;
+    }
+}
+
+p {
+    margin: 0px 0px 16px 0px;
+    line-height: 24px;
+}
+
+a {
+    @include anchor-color($primary-color);
+}
+
+.font-color--primary {
+    color: $primary-color;
+}
+.font-weight--600 {
+    font-weight: 600;
+}
+.font-size--18 {
+    font-size: 18px;
+}
+.font-size--24 {
+    font-size: 24px;
+}
+.content-container {
+    max-width: $content-max-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// SPACING
+// Padding
+.padding--8 {
+    padding: 8px;
+}
+
+.padding--16 {
+    padding: 16px;
+}
+
+.padding--24 {
+    padding: 24px;
+}
+
+// Padding X
+.padding-x--8 {
+    padding: 0px 8px;
+}
+
+.padding-x--16 {
+    padding: 0px 16px;
+}
+
+.padding-x--24 {
+    padding: 0px 24px;
+}
+
+// Margin 
+.margin--8 {
+    margin: 8px;
+}
+
+.margin--16 {
+    margin: 16px;
+}
+
+.margin--24 {
+    margin: 24px;
+}
+
+// Margin X
+.margin-x--8 {
+    margin: 0px 8px;
+}
+
+.margin-x--16 {
+    margin: 0px 16px;
+}
+
+.margin-x--24 {
+    margin: 0px 24px;
+}
+
+// Margin bottom
+.margin-bottom--8 {
+    margin-bottom: 8px;
+}
+
+.margin-bottom--16 {
+    margin-bottom: 16px;
+}
+
+.margin-bottom--24 {
+    margin-bottom: 24px;
 }

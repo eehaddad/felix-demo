@@ -1,1 +1,1 @@
-# felix-demo
+# wsn-psychological-group

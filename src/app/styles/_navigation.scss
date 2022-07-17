@@ -12,12 +12,12 @@
     transition: $transition-all;
     z-index: 10;
 
-    @media screen and (min-width: $mobile-nav-min) {
+    @media screen and (min-width: $sm-width-min) {
         display: none;
     }
 }
 
-@media screen and (max-width: $mobile-nav-max) {
+@media screen and (max-width: $sm-width-max) {
     .main-nav-open {
         // Body style 
         position: relative;
@@ -104,7 +104,7 @@
         }
     }
 
-    @media screen and (min-width: $mobile-nav-min) {
+    @media screen and (min-width: $sm-width-min) {
         justify-content: flex-end;
         align-items: center;
         flex-direction: row;

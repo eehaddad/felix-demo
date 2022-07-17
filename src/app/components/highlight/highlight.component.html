@@ -1,0 +1,5 @@
+<section [id]="highlightId" class="highlight-container" 
+[class.highlight-animate]="revealHighlight(highlightId)">
+    <p class="highlight-text" [ngStyle]="{'color':setColor(textColor)}">{{text}}</p>
+    <div class="highlight-color-block" [ngStyle]="{'background-color':setColor(bgColor)}"></div>
+</section>

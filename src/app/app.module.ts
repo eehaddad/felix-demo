@@ -8,6 +8,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
+import { SectionScrollDirective } from './services/section-scroll.directive';
+import { HighlightComponent } from './components/highlight/highlight.component';
+import { FaqComponent } from './pages/faq/faq.component';
+import { ServicesComponent } from './pages/services/services.component';
 
 @NgModule({
   declarations: [
@@ -16,14 +20,16 @@ import { HomeComponent } from './pages/home/home.component';
     FooterComponent,
     AboutComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    SectionScrollDirective,
+    HighlightComponent,
+    FaqComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  // used for ionic icon pack
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })

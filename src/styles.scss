@@ -1,4 +1,8 @@
 @import 'app/styles/variables';
 
+//Mixins
+@import 'app/styles/mixins/anchor.scss';
+
+//Partials 
 @import 'app/styles/layout';
 @import 'app/styles/navigation';
